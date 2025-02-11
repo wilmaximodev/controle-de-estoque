@@ -1,0 +1,15 @@
+{
+  "name": "controlador-de-estoque",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Wilson Maximo",
+  "license": "ISC",
+  "description": "Programa para controle de estoque em inventário",
+  "dependencies": {
+    "eslint-config-trybe-backend": "^2.1.0"
+  }
+}
