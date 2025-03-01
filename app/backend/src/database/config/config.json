@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "123456",
+    "database": "controle_de_estoque",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "test": {
+    "username": "root",
+    "password": "123456",
+    "database": "controle_de_estoque_test",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "username": "root",
+    "password": "123456",
+    "database": "controle_de_estoque_prod",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  }
+}
