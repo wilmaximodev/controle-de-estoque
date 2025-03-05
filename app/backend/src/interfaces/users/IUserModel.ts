@@ -1,5 +1,6 @@
-import { IUser } from './IUser';
+import IUser from './IUser';
 
 export default interface IUserModel {
-  getUserById(id: number): Promise<IUser | null>
+  getUser(email: string): Promise<IUser | null>
+  getRole(email: string): Promise<object>
 }

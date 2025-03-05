@@ -1,6 +1,6 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 
-// import router from './routes';
+import router from './routes';
 
 class App {
   public app: express.Express;
@@ -13,11 +13,14 @@ class App {
     this.routes();
 
     // Não remover essa rota
-    // this.app.get('/', (req, res) => res.json({ ok: true }));
+    this.app.get('/', (req: Request, res: Response) => {
+      res.json({ ok: true });
+    }
+    );
   }
-
+  
   private routes(): void {
-    // this.app.use(router);
+    this.app.use(router);
   }
 
   private config():void {

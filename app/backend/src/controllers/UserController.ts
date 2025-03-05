@@ -1,14 +1,19 @@
 import { Request, Response } from 'express';
 import UserService from '../services/UserService';
+import mapStatusHTTP from '../utils/mapStatusHTTP';
 
 export default class UserController {
     constructor(
         private userService: UserService = new UserService()
     ) { }
 
-    public async getUser(req: Request, res: Response) {
-        const user = await this.userService.getUser(+req.params.id);
-        console.log(user);
-        return res.json(user);
+    public async login(req: Request, res: Response) {
+        const { status, data } = await this.userService.login(req.body);
+        return res.status(mapStatusHTTP(status)).json(data);
+      }
+
+    public async getRole(req: Request, res: Response) {
+        const {status, data} = await this.userService.getRole(res.locals.email);
+        return res.status(mapStatusHTTP(status)).json(data);
     }
 };
